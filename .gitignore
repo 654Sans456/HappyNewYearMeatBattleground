@@ -1,0 +1,121 @@
+# ============= #
+# Unity Default #
+# ============= #
+
+# Временные файлы, генерируемые Unity редактором или во время выполнения
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Файлы, созданные в процессе работы
+*.pidb
+*.db
+*.db.meta
+*.db.1
+*.db.2
+*.db.3
+
+# Файлы проекта Unity
+# Они генерируются заново и должны игнорироваться
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb.meta
+
+# Библиотеки Unity (генерируются автоматически из Assets и Packages)
+# Их НЕ нужно коммитить
+[Ll]ibrary/
+[Ll]ibrary.meta
+
+# Папка с собранными ассетами и промежуточными данными
+[Aa]sset[Ss]toreTools*
+
+# Папка для авто-генерируемых файлов (Collab, Unity Cloud Build)
+[Cc]ollab[Aa]sset[Ss]ets/
+[Cc]ollab[Aa]sset[Ss]ets.meta
+[Uu]nity[Cc]loud[Bb]uild/
+
+# =============== #
+# Пакетный менеджер #
+# =============== #
+
+# Папка пакетов (можно коммитить, но обычно не нужно, если используется UPM или manifest.json)
+[Pp]ackages/
+
+# Файл блокировки пакетов (генерируется автоматически)
+# Коммитить только если вы уверены в необходимости
+packages-lock.json
+
+# =============== #
+# IDE и Редакторы #
+# =============== #
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.opendb
+*.VC.db
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ================== #
+# Операционные системы #
+# ================== #
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+
+# Windows
+$RECYCLE.BIN/
+Desktop.ini
+
+# Linux
+*~
+
+# =================== #
+# Дополнительные настройки #
+# =================== #
+
+# Файлы, специфичные для вашего проекта (добавьте свои)
+# Например, конфиги с паролями, персональные настройки
+*private.asset
+*private.txt
+*_secret.json
+*_secret.yaml
+
+# Локальный кэш адресов
+AddressableAssetsData/*.hash
+AddressableAssetsData/*.bin
+AddressableAssetsData/*.json
+!AddressableAssetsData/label_*_addressables_content_state.bin
+
+# Кэш TextMeshPro
+TextMesh Pro/Shaders/*.so
+
+# Файлы больших бинарных данных, если не используете Git LFS
+# *.mp4
+# *.wav
+# *.bundle
+# *.unitypackage
