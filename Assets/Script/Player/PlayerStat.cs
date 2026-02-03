@@ -5,13 +5,12 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
     // Start is called before the first frame update
-    PlayerController.attack=1;
 
     
      
-    public void ATTPlus {
-    
+    public void ATTPlus() {
+        PlayerController.attack+=1;
     }
-    public void MSPlus { }
-    public void ASPlus { }
+    public void MSPlus() { PlayerController.moveSpeed += 1f; }
+    public void ASPlus() { }
 }
