@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+   public static float moveSpeed = 5f;
+    public static int attack = 1;
 
     private Rigidbody2D rb;
 
