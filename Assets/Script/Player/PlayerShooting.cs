@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        Debug.Log("Атака="+PlayerController.attack);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

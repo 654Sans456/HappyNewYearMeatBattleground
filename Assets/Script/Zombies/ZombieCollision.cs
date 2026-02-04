@@ -10,7 +10,7 @@ public class ZombieCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            healthZombie.GetComponent<HealthSystem>().health--;
+            healthZombie.GetComponent<HealthSystem>().health-=PlayerController.attack;
             GameManager.Instance.Score++;
         }
 
