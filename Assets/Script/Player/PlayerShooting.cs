@@ -6,7 +6,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public float attackCooldown = 2f;
+    public float attackCooldown = 1f;
     private Animator animator;
     private float lastAttackTime = 0f;
 

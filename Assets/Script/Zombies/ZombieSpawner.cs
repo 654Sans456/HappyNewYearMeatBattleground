@@ -13,6 +13,9 @@ public class ZombieSpawner : MonoBehaviour
 
     void Update()
     {
+        if (WaveManager.Instance == null || !WaveManager.Instance.WaveActive)
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
@@ -33,13 +36,14 @@ public class ZombieSpawner : MonoBehaviour
 
     void SpawnZombie()
     {
-        player = GameObject.FindWithTag("Player").transform;
-
-        if (player != null)
+        if (player == null)
         {
-            Vector2 spawnPosition = GetRandomSpawnPosition();
-
-            Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
+            GameObject p = GameObject.FindWithTag("Player");
+            if (p != null) player = p.transform;
+            else return;
         }
+
+        Vector2 spawnPosition = GetRandomSpawnPosition();
+        Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
     }
 }
