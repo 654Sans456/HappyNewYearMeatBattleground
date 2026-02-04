@@ -1626,6 +1626,8 @@ GameObject:
   - component: {fileID: 2023870056}
   - component: {fileID: 2023870055}
   - component: {fileID: 2023870057}
+  - component: {fileID: 2023870059}
+  - component: {fileID: 2023870058}
   m_Layer: 0
   m_Name: 3f0b05a6f262260
   m_TagString: Untagged
@@ -1759,6 +1761,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMusic: 1
   soundSource: {fileID: 2023870055}
+--- !u!114 &2023870058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023870054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4b0894c45a8644ab52484cf66680a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2023870059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023870054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c228aa844934f14caf5e78302ef5bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

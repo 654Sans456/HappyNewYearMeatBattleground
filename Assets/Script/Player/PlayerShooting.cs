@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -5,15 +6,35 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public float attackCooldown = 1f;
+    private Animator animator;
+    private float lastAttackTime = 0f;
+
     public float bulletSpeed = 10f;
     public float bulletLifetime = 1f;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            if (Time.time - lastAttackTime >= attackCooldown)
+            {
+                Attack();
+            }
         }
+    }
+
+    void Attack()
+    {
+        lastAttackTime = Time.time;
+
+        animator.SetTrigger("Attack");
+        Shoot();
     }
 
     void Shoot()
