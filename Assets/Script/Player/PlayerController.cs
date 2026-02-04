@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+   public static float moveSpeed = 5f;
+    public static float AttSpeed = 5f;
+    [SerializeField] public static int attack = 1;
 
     private Rigidbody2D rb;
 
