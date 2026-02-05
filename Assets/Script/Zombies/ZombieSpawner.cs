@@ -13,7 +13,7 @@ public class ZombieSpawner : MonoBehaviour
 
     void Update()
     {
-        if (WaveManager.Instance == null || !WaveManager.Instance.WaveActive)
+        if (WaveManager.Instance == null || !WaveManager.WaveActive)
             return;
 
         timer += Time.deltaTime;

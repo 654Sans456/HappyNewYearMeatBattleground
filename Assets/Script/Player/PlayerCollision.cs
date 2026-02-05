@@ -25,6 +25,10 @@ public class PlayerCollision : MonoBehaviour
 
         if (healthPlayer.GetComponent<HealthSystem>().health <= 0)
         {
+            WaveManager.WaveActive=false;
+            PlayerController.attack = PlayerStat.Instance.minAtt;
+            PlayerController.AttSpeed = PlayerStat.Instance.maxAttS;
+            PlayerController.moveSpeed = PlayerStat.Instance.minMs;
             GameManager.Instance.NameScenes = "ReturnGame";
             SceneManager.LoadScene("Loading");
         }

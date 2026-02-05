@@ -9,7 +9,7 @@ public class WaveTimerUI : MonoBehaviour
 
     void Update()
     {
-        if (WaveManager.Instance == null || !WaveManager.Instance.WaveActive)
+        if (WaveManager.Instance == null || !WaveManager.WaveActive)
             return;
 
         float timeLeft = WaveManager.Instance.TimeRemaining;
@@ -17,9 +17,7 @@ public class WaveTimerUI : MonoBehaviour
 
         if (seconds <= 5)
             timerText.color = Color.red;
-        else
-            timerText.color = Color.white;
-
+       
 
         timerText.text = "" + seconds;
     }

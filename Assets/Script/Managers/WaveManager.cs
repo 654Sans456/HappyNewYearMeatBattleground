@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class WaveManager : MonoBehaviour
 {
     public static WaveManager Instance;
-
+    public static bool gameover = false;
     public event Action<int> OnWaveStarted;
     public float TimeRemaining => Mathf.Max(0, waveDuration - timer);
 
@@ -16,7 +16,7 @@ public class WaveManager : MonoBehaviour
     public float waveDuration = 40f;
 
     private float timer;
-    public bool WaveActive { get; private set; }
+    public static bool WaveActive = true;
 
     private void Awake()
     {
@@ -55,8 +55,11 @@ public class WaveManager : MonoBehaviour
 
         timer += Time.deltaTime;
 
+        Debug.Log(timer);
+
         if (timer >= waveDuration)
         {
+            GameManager.Scores+=GameManager.Instance.Score;
             EndWave();
         }
     }
@@ -74,6 +77,6 @@ public class WaveManager : MonoBehaviour
         WaveActive = false;
         currentWave++;
 
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Shop");
     }
 }

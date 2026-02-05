@@ -12,6 +12,7 @@ public class ForTextScore : MonoBehaviour
 
     void Update()
     {
-        textMeshPro.text = "Score: " + GameManager.Instance.Score;
+        textMeshPro.text = "Score in last wave: " + GameManager.Instance.Score + "\nTotal score:" + GameManager.Scores;
+        ;
     }
 }

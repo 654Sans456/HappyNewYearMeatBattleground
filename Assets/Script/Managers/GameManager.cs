@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
+    public static int Scores=0;
     private string nameScenes = "";
     private int score = 0;
     private int coins = 0;

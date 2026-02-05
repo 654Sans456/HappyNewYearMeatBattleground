@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public static PlayerShooting Instance { get; private set; }
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public float attackCooldown = 1f;
+    public float attackCooldown = PlayerController.AttSpeed;
     private Animator animator;
     private float lastAttackTime = 0f;
 
